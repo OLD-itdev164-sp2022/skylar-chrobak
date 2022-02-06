@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-import Layout from "...src/components/layout.js"
-import Image from ".../components/image"
-import SEO from ".../components/seo"
+import Layout from ".../components/layout.js"
+import Image from ".../images"
+import SEO from ".../components/seo.js"
 
 const About = ({data})=>{
     const {name, company} = data.site.siteMetadata.contact;
