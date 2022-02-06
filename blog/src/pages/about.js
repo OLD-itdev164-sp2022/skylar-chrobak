@@ -1,18 +1,19 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from ".../components/layout.js"
-import Image from ".../images"
-import SEO from ".../components/seo.js"
+import Layout from "../components/layout.js"
+import Image from "../images/gatsby-astronaut.png"
+import Seo from "../components/seo.js"
 
 const About = ({data})=>{
     const {name, company} = data.site.siteMetadata.contact;
     return (
         <Layout>
-            <SEO title="About"/>
+            <Seo title="About" />
             <h1>About Us</h1>
             <p>{`${company} was started by ${name} in 2022`}</p>
             <p>{`At ${company} we make blogs!`}</p>
+
             <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
                 <Image />
             </div>
@@ -20,6 +21,7 @@ const About = ({data})=>{
         </Layout>
     )
 }
+
 export default About
 
 export const query= graphql`
@@ -32,5 +34,5 @@ export const query= graphql`
                 }
             }
         }
-    }
-    `
+}
+`
