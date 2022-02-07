@@ -6,11 +6,18 @@ module.exports = {
     //siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: 'Skylar C.',
-      company: 'MATC',
+      company: 'Blogging LTD',
       address: 'Milwaukee, Wi'
     }
   },
   plugins: [
+  {
+    resolve: `gatsby-source-contentful`,
+    options: {
+      spaceId: `dgitkyr5sjv9`,
+      accessToken: `hOd771HiMbJb8AhxoVyOgePF4vQaUB3_U8Q1HkD-BCA`
+    }
+  },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
