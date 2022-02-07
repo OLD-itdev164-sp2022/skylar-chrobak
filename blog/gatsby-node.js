@@ -1,5 +1,4 @@
 const path = require(`path`);
-const { resourceLimits } = require("worker_threads");
 
 exports.createPages = ({ graphql, actions }) => {
   const {createPage} = actions;
@@ -15,11 +14,11 @@ exports.createPages = ({ graphql, actions }) => {
     }
   }
 }
-`).then(result =>{
+`).then(result => {
   if (result.errors){
     reject(result.errors);
   }
-  result.data.allContentfulBlogPost.edges.forEach(edge) =>{
+  result.data.allContentfulBlogPost.edges.forEach((edge) => {
     createPage({
       path: edge.node.slug,
       component: path.resolve(`./src/templates/blog-post.js`),
