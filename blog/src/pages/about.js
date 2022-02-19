@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout.js"
-import Image from "../images/gatsby-astronaut.png"
+import Image from "../images/gatsby-icon.png"
 import Seo from "../components/seo.js"
 
 const About = ({data})=>{
