@@ -36,6 +36,9 @@ export const query = graphql`
   allContentfulBlogPost {
     edges {
       node {
+        id
+        title
+        slug
         body {
           childMarkdownRemark {
             excerpt
