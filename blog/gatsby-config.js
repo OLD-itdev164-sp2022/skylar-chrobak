@@ -1,9 +1,12 @@
+require ('dotenv').config({
+  path: `/Users/skylarchrobak/Documents/Github/skylar-chrobak/blog/.env.development`
+});
+
 module.exports = {
   siteMetadata: {
     title: `Skylar's Gatsby Blog`,
     description: `The blog of Skylar for ITDEV-164.`,
     author: `@skytheITgal`,
-    //siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: 'Skylar C.',
       company: 'Blogging LTD',
@@ -11,15 +14,15 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
   {
     resolve: `gatsby-source-contentful`,
     options: {
-      spaceId: `dgitkyr5sjv9`,
-      accessToken: `hOd771HiMbJb8AhxoVyOgePF4vQaUB3_U8Q1HkD-BCA`
+      spaceId: `${process.env.SPACE_ID}`,
+      accessToken: `${process.env.ACCESS_TOKEN}`
     }
   },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +30,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
