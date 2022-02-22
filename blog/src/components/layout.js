@@ -8,10 +8,19 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled, { ThemeProvider } from 'styled-components'
 
+import { Gray} from '/Users/skylarchrobak/Documents/Github/skylar-chrobak/blog/src/themes/Gray/Gray.js'
 import Header from "./header"
-import "./layout.css"
+import GlobalStyle from './GlobalStyle'
 
+
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+  padding-top: 0;
+`
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -24,27 +33,22 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+    <ThemeProvider theme={Gray}>
+    <GlobalStyle />
+      <Header siteTitle={data.site.siteMetadata.title || `Title`} />
+      <Content>
         <main>{children}</main>
         <footer
           style={{
             marginTop: `2rem`,
           }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+          >
+            {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </footer>
+      </Content>
+    </ThemeProvider>
   )
 }
 
