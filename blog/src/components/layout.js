@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from 'styled-components'
 
-import { Gray} from '/Users/skylarchrobak/Documents/Github/skylar-chrobak/blog/src/themes/Gray/Gray.js'
+import { Gray} from '/src/themes/Gray/Gray.js'
 import Header from "./header"
 import GlobalStyle from './GlobalStyle'
 
