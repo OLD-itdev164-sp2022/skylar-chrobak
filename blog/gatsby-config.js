@@ -1,5 +1,5 @@
 require ('dotenv').config({
-  path: `/Users/skylarchrobak/Documents/Github/skylar-chrobak/blog/.env.development`
+  path: `blog/.env.development`
 });
 
 module.exports = {
