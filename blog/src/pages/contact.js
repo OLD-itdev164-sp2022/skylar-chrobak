@@ -2,7 +2,6 @@ import React from "react"
 import {Link, graphql} from "gatsby"
 
 import Layout from "../components/layout.js"
-import Image from "../images/gatsby-astronaut.png"
 import Seo from "../components/seo.js"
 
 const Contact = ({data})=>{
@@ -17,14 +16,13 @@ const Contact = ({data})=>{
         <div>{address}</div>
 
         <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
-            <Image />
         </div>
         <Link to="/">Home</Link>
     </Layout>
     )
 }
 
-export default Contact 
+export default contact 
 
 export const query = graphql`
     query{
