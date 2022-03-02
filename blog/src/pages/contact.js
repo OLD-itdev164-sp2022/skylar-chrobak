@@ -22,7 +22,7 @@ const Contact = ({data})=>{
     )
 }
 
-export default contact 
+export default Contact 
 
 export const query = graphql`
     query{
