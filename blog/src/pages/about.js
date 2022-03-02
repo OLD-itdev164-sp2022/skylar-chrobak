@@ -25,14 +25,14 @@ const About = ({data})=>{
 export default About
 
 export const query= graphql`
-    query{
-        site{
-            siteMetadata{
-                contact{
-                    name
-                    company
-                }
+query {
+    site {
+        siteMetadata {
+            contact {
+                name
+                company
             }
         }
+    }
 }
 `
