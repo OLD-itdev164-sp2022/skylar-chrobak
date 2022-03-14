@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from 'styled-components'
 
 import { Gray} from '/src/themes/Gray/Gray.js'
-import Header from "./header"
+import { Header } from "./Header"
 import GlobalStyle from './GlobalStyle'
 
 
