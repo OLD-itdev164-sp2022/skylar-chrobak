@@ -8,7 +8,7 @@ const BlogPost = ({ data }) =>{
 
     return (
         <Layout>
-            <h1>{title}</h1>
+            <H1>{title}</H1>
             <div dangerouslySetInnerHTML={{__html: body.childMarkdownRemark.html}}></div>
         </Layout>
     );
