@@ -1,4 +1,4 @@
 import React from 'react'
-import { BaseConatiner } from '../BaseContainer'
+import { BaseContainer } from '../BaseContainer'
 
-export const Section = props => <BaseConatiner as="section" {...props}/>
+export const Section = props => <BaseContainer as="section" {...props}/>

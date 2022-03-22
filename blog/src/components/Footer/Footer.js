@@ -1,4 +1,4 @@
 import React from 'react'
-import { BaseConatiner } from '../BaseContainer'
+import { BaseContainer } from '../BaseContainer'
 
-export const Footer = props => <BaseConatiner as='footer' {...props}/>
+export const Footer = props => <BaseContainer as='footer' {...props}/>
