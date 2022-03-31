@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from 'styled-components'
@@ -8,7 +8,7 @@ import { IconButton } from '../Button'
 import { Section } from '../Section'
 
 const Outer = styled.header`
-  background: ${props => props.theme.header.backgroundColor};
+  background: ${({ theme })=> theme.variants.header.primary.backgroundColor};
   margin-bottom: 1.45rem;
 `
 const Inner = styled.div`
