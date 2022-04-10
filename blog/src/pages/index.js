@@ -1,11 +1,20 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
+import styled from 'styled-components'
+import { Box, Card, Image, Heading } from 'rebass'
 import { GatsbyImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { List, ListItem } from "../components/List"
 
+const Grid = styled(Box)`
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+`
 const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Home" />
