@@ -11,9 +11,9 @@ const Reset = styled(Button)`
     cursor: pointer;
 `
 
-export const BaseButton = ({ children, ...rest})=>
+export const BaseButton = ({ children, ...rest }) => 
     <Reset {...rest}>{children}</Reset>
 
-    BaseButton.propTypes = {
-        children: PropTypes.node.isRequired
-    }
+BaseButton.propTypes = {
+    children: PropTypes.node.isRequired
+}
