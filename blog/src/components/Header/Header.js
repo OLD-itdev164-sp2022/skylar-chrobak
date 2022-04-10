@@ -50,7 +50,7 @@ const Header = ({ siteTitle }) => (
         <Section width={1/12}
           flex flexDirection="column" justifyContent="center">
           <ThemeConsumer>
-            {theme => <Image src={theme.image.mainHeader}/>}
+            {theme => <Image src={theme.images.mainHeader}/>}
           </ThemeConsumer>
         </Section>
         <Section width={11/12}

@@ -37,12 +37,12 @@ const Layout = ({ children }) => {
     <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title || `Title`} />
       <Content>
-        <Main m={20}>{children}</Main>
-        <Footer>
+        <main m={20}>{children}</main>
+        <footer>
             {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.com">Gatsby</a>
-          </Footer>
+          </footer>
       </Content>
     </ThemeProvider>
   )
